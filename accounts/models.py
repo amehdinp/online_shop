@@ -8,6 +8,7 @@ class User (AbstractUser):
     fullname = models.CharField(max_length=100)
     is_active = models.BooleanField(default=True)
     is_superuser = models.BooleanField(default=False)
+    username = None
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['fullname']
     objects = MyUserManager()

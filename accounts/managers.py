@@ -7,12 +7,9 @@ class MyUserManager(BaseUserManager):
             raise ValueError('User must insert email address')
         if not fullname:
             raise ValueError('user must chose full name')
-        print('4')
         user = self.model(email=self.normalize_email(email), fullname=fullname,)
         user.set_password(password)
-        print('5')
         user.save(using=self._db)
-        print('6')
         return user
 
     def create_superuser(self, email, fullname, password):

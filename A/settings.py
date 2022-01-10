@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'A.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'shop',
         'USER': 'postgres',
-        'PASSWORD': 'postgres',
+        'PASSWORD': 'root',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
@@ -93,7 +93,6 @@ DATABASES = {
 # }
 AUTH_USER_MODEL = 'accounts.User'
 
-ACCOUNT_USER_MODEL_USERNAME_FIELD = 'username'
 
 
 # Password validation
