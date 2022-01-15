@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load thumbnail %}
+
+{% thumbnail product.image "100x100" as img %}
+    <img src="{{ img.url }}">
+{% endthumbnail %}
+<p> {{product.name}} </p>
+{% endblock %}
+
